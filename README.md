@@ -1,19 +1,19 @@
-# Kanka D&D 5e Monster
+# Kanka D&D 5e Character
 
-This package is an extension for [kanka.io](https://kanka.io), to add a community attribute template for D&D 5th edition monsters.
+This package is an extension for [kanka.io](https://kanka.io), to add a community attribute template for D&D 5th edition Characters.
 
 ## Configruation
 
 Add the following line to `config/attribute-templates.php` 
 ```php
 return [
-    'dnd5emonster' => Kanka\Dnd5eMonster\Template::class
+    'dnd5echaracter' => Kanka\Dnd5eCharacter\Template::class
 ];
 ```
 
 And publish the assets with the following command.
 ```
-php artisan vendor:publish --tag=dnd5emonster --force
+php artisan vendor:publish --tag=dnd5echaracter --force
 ```
 
 You are now ready to go.
@@ -28,6 +28,6 @@ To create a community attribute template for Kanka, follow the following steps.
 4. Edit the `resources/sass/template.scss` file to define how the page will be styled. To compile the .scss file to .css:
     * `npm install`
     * `npm run prod`
-5. Rename the `publishable/config/dnd5emonster.php` to your package's unique name and edit the attributes.
+5. Rename the `publishable/config/dnd5echaracter.php` to your package's unique name and edit the attributes.
 6. Edit `publishable/lang/en/template.php` to configure the texts for your template.
-7. Edit the `composer.json` and prepare your package for [gibhub](https://github.com) and [packagist](https://packagist.org)
+7. Edit the `composer.json` and prepare your package for [github](https://github.com) and [packagist](https://packagist.org)
