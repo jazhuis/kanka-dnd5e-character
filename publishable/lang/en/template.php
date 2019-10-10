@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'name' => 'D&D 5e Monster',
+    'name' => 'D&D 5e Character',
 
     'fields' => [
         'size' => 'Size',
