@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanka\Dnd5eMonster;
+namespace Kanka\Dnd5eCharacter;
 
 class Template
 {
@@ -20,7 +20,7 @@ class Template
      */
     public function alias()
     {
-        return 'dnd5emonster';
+        return 'dnd5echaracter';
     }
 
     /**
@@ -38,6 +38,6 @@ class Template
      */
     public function attributes()
     {
-        return config('dnd5emonster.attributes');
+        return config('dnd5echaracter.attributes');
     }
 }
