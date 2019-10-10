@@ -1,13 +1,13 @@
 {
-  "name": "ilestis/kanka-dnd5e-monster",
-  "description": "A attribute template for D&D 5th edition monsters",
+  "name": "jazhuis/kanka-dnd5e-character",
+  "description": "A attribute template for D&D 5th edition characters",
   "keywords": [
     "kanka",
     "dnd",
     "5e",
-    "monsters"
+    "characters"
   ],
-  "homepage": "https://github.com/ilestis/kanka-dnd5e-monster",
+  "homepage": "https://github.com/jazhuis/kanka-dnd5e-character",
   "license": "EUPL-1.1",
   "authors": [
     {
@@ -15,19 +15,23 @@
       "email": "hello@kanka.io",
       "homepage": "https://kanka.io"
     }
+    {
+      "name": "Jazhuis",
+      "email": "jazhuis@gmail.com",
+      "homepage": "https://kanka.io"
   ],
   "require": {
     "illuminate/support": "~5"
   },
   "autoload": {
     "psr-4": {
-      "Kanka\\Dnd5eMonster\\": "src"
+      "Kanka\\Dnd5eCharacter\\": "src"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Kanka\\Dnd5eMonster\\AttributeTemplateServiceProvider"
+        "Kanka\\Dnd5eCharacter\\AttributeTemplateServiceProvider"
       ]
     }
   }
