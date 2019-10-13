@@ -21,7 +21,7 @@ function replaceName($text, $model) {
 ?>
 <div class="attribute-layout-dnd5e">
     <h3>{{ $model->name }}</h3>
-    <p>{{ trim(Arr::get($attributes, 'size', '') . ' ' . Arr::get($attributes, 'creature_race', '')) }}, {{ Arr::get($attributes, 'alignment') }} </p>
+    <p>{{ trim(Arr::get($attributes, 'size', '') . ' ' . Arr::get($attributes, 'character_race', '')) }}, {{ Arr::get($attributes, 'alignment') }} </p>
     <hr>
     <div class="first">
         @if (Arr::get($attributes, 'armor_class'))
@@ -94,13 +94,55 @@ function replaceName($text, $model) {
             <strong>{{ __('dnd5echaracter::template.languages') }}</strong>
             {{ Arr::get($attributes, 'languages') }}<br />
         @endif
-        @if (Arr::get($attributes, 'challenge_rating'))
-            <strong>{{ __('dnd5echaracter::template.challenge_rating') }}</strong>
-            {{ Arr::get($attributes, 'challenge_rating') }}<br />
+        @if (Arr::get($attributes, 'proficiencies_armor'))
+            <strong>{{ __('dnd5echaracter::template.proficiencies_armor') }}</strong>
+            {{ Arr::get($attributes, 'proficiencies_armor') }}<br />
+        @endif
+        @if (Arr::get($attributes, 'proficiencies_weapon'))
+            <strong>{{ __('dnd5echaracter::template.proficiencies_weapon') }}</strong>
+            {{ Arr::get($attributes, 'proficiencies_weapon') }}<br />
+        @endif
+        @if (Arr::get($attributes, 'proficiencies_other'))
+            <strong>{{ __('dnd5echaracter::template.proficiencies_other') }}</strong>
+            {{ Arr::get($attributes, 'proficiencies_other') }}<br />
         @endif
     </div>
     <hr>
-
+    <div class="magic">
+        @if (Arr::get($attributes, 'spellcasting_class'))
+            <strong>{{ __('dnd5echaracter::template.spellcasting_class') }}</strong>
+            {{ Arr::get($attributes, 'spellcasting_class') }}<br />
+        @endif
+        @if (Arr::get($attributes, 'spellcasting_attribute'))
+            <strong>{{ __('dnd5echaracter::template.spellcasting_attribute') }}</strong>
+            {{ Arr::get($attributes, 'spellcasting_attribute') }}<br />
+        @endif
+        @if (Arr::get($attributes, 'spellcasting_attack'))
+            <strong>{{ __('dnd5echaracter::template.spellcasting_attack') }}</strong>
+            {{ Arr::get($attributes, 'spellcasting_attack') }}<br />
+        @endif
+        @if (Arr::get($attributes, 'spellcasting_save'))
+            <strong>{{ __('dnd5echaracter::template.spellcasting_save') }}</strong>
+            {{ Arr::get($attributes, 'spellcasting_save') }}<br />
+        @endif
+        @if (Arr::get($attributes, 'spellcasting_to_prep'))
+            <strong>{{ __('dnd5echaracter::template.spellcasting_to_prep') }}</strong>
+            {{ Arr::get($attributes, 'spellcasting_to_prep') }}<br />
+        @endif
+        @if (Arr::get($attributes, 'spellcasting_cantrips'))
+            <strong>{{ __('dnd5echaracter::template.spellcasting_cantrips') }}</strong>
+            {{ Arr::get($attributes, 'spellcasting_cantrips') }}<br />
+        @endif
+        @if (Arr::get($attributes, 'spellcasting_prepared'))
+            <strong>{{ __('dnd5echaracter::template.spellcasting_prepared') }}</strong>
+            {{ Arr::get($attributes, 'spellcasting_prepared') }}<br />
+        @endif
+        @if (Arr::get($attributes, 'spellcasting_known'))
+            <strong>{{ __('dnd5echaracter::template.spellcasting_known') }}</strong>
+            {{ Arr::get($attributes, 'spellcasting_known') }}<br />
+        @endif
+    </div>
+    <hr>
     <div class="abilities">
         @if (Arr::get($attributes, 'innate_spellcasting'))
             <p><strong>{{ __('dnd5echaracter::template.innate_spellcasting') }}.</strong>
